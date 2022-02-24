@@ -52,6 +52,27 @@ export function useNavigation() {
 		return theme === Theme.DARK;
 	}, [theme]);
 
+	const menuItems: NavigationItems = [
+		...staticMenuItems,
+		// ...(!loading && status && status.discord_status !== DiscordStatus.OFFLINE
+		// 	? [
+		// 			[
+		// 				{
+		// 					type: NavigationItemType.LINK,
+		// 					icon: (
+		// 						<Status.Indicator
+		// 							color={color}
+		// 							pulse={status.discord_status !== DiscordStatus.OFFLINE}
+		// 						/>
+		// 					),
+		// 					text: 'Status',
+		// 					href: '/status',
+		// 				} as NavigationItem,
+		// 			],
+		// 	  ]
+		// 	: []),
+	];
+
 	const settingsItems: NavigationItems = [
 		[
 			{
