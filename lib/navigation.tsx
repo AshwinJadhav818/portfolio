@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { useTheme } from 'next-themes';
 
-import { Status } from '~/components';
 import { usePersistantState, useStatus } from '~/lib';
 
 import { DiscordStatus, NavigationItemType, Theme } from '~/types';
