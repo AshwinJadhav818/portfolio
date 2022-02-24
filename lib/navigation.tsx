@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import { useTheme } from 'next-themes';
 
-import { usePersistantState, useStatus } from '~/lib';
+import { usePersistantState } from '~/lib';
 
-import { DiscordStatus, NavigationItemType, Theme } from '~/types';
+import { NavigationItemType, Theme } from '~/types';
 
 import type { NavigationItem, NavigationItems } from '~/types';
 
@@ -43,7 +43,6 @@ const staticMenuItems: Array<Array<NavigationItem>> = [
 export function useNavigation() {
 	const state = usePersistantState();
 	const { animations: background, sound } = state.get();
-	const { color, loading, status } = useStatus();
 	const { theme, setTheme } = useTheme();
 
 	const isDark = useMemo(() => {
@@ -52,27 +51,6 @@ export function useNavigation() {
 
 		return theme === Theme.DARK;
 	}, [theme]);
-
-	const menuItems: NavigationItems = [
-		...staticMenuItems,
-		...(!loading && status && status.discord_status !== DiscordStatus.OFFLINE
-			? [
-					[
-						{
-							type: NavigationItemType.LINK,
-							icon: (
-								<Status.Indicator
-									color={color}
-									pulse={status.discord_status !== DiscordStatus.OFFLINE}
-								/>
-							),
-							text: 'Status',
-							href: '/status',
-						} as NavigationItem,
-					],
-			  ]
-			: []),
-	];
 
 	const settingsItems: NavigationItems = [
 		[
