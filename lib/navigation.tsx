@@ -21,6 +21,12 @@ const staticMenuItems: Array<Array<NavigationItem>> = [
 			text: 'Blog',
 			href: '/blog',
 		},
+		{
+			type: NavigationItemType.LINK,
+			icon: 'feather:terminal',
+			text: 'Technologies',
+			href: '/technologies',
+		},
 	],
 	[
 		{

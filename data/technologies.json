@@ -1,0 +1,23 @@
+[
+	{
+		"color": "#0E153A",
+		"description": "Next level React experience with Next.js",
+		"homepage": "https://nextjs.org/",
+		"icon": "cib:next-js",
+		"name": "Next.js"
+	},
+	{
+		"color": "#5a94dd",
+		"description": "A JavaScript library for building user interfaces",
+		"homepage": "https://reactjs.org/",
+		"icon": "cib:react",
+		"name": "React.js"
+	},
+	{
+		"color": "#5a94dd",
+		"description": "A JavaScript library for building user interfaces",
+		"homepage": "https://reactjs.org/",
+		"icon": "logos:nodejs-icon",
+		"name": "Node.js"
+	}
+]

@@ -52,7 +52,7 @@ const IconContainer = styled.div<{ color?: string }>`
 `;
 
 const StyledIcon = styled(Icon)(tw`
-	w-6 h-6 \
+	w-10 h-10 \
 	text-white
 `);
 
